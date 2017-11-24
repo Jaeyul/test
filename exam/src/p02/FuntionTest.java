@@ -13,6 +13,12 @@ public class FuntionTest {
 		return num1 + "+" + num2 + "의 결과값은" + (num1+num2) +  "입니다.";
 	}
 	
+	static int add4(int[7] numArr) {
+		int result ;
+		for(int i=0; i<numArr.length; i++) {
+			
+		}
+	}
 	
 	public static void main(String[] args) {
 		add(1,2);
