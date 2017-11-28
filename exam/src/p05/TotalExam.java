@@ -12,10 +12,10 @@ public class TotalExam {
 	public static void main(String[] args) {		
 		TotalExam te = new TotalExam();
 //		te.a = 3;
-//		System.out.println(te.bc);
-//		if(te.bc!=null && te.bc.toString().equals("true")) {
-//			System.out.println("TotalExam의 bc의 값이 참이네요!");
-//		}
+		System.out.println(te.bc);
+		if(te.bc!=null && te.bc.toString().equals("true")) {
+			System.out.println("TotalExam의 bc의 값이 참이네요!");
+		}
 		if(te.a==1 || te.a==2 || te.a==3) {
 			System.out.println("a가 0이 아니에요");
 		}else if(te.a==0 && te.a==1) {
