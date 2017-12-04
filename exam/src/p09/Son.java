@@ -12,6 +12,16 @@ public class Son extends FaFa {
 		
 	}
 	
+	protected void print(String str) {
+		System.out.println(str);
+		
+	}
+	
+	void print(String str, String str2) {
+		System.out.println(str + "," + str2);
+		
+	}
+	
 	
 	public static void main(String[] args) {
 		
