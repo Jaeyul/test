@@ -74,6 +74,12 @@ public class Lotto {
 		
 	}
 	
+	boolean a() {
+		return trun;
+		
+	}
+	
+	int a = r.nextInt(45);
 	public static void main(String[] args) {
 		
 		
@@ -82,6 +88,8 @@ public class Lotto {
 //		lt.lottoMaxNum = 2;
 		lt.makeLottoNums();
 		lt.printLottoNums();
+		
+		int b = lt.a(); 
 			
 					
 		
