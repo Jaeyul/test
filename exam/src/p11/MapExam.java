@@ -23,11 +23,13 @@ public class MapExam {
 		
 		ArrayList<HashMap<String, String>> alMap = new ArrayList<HashMap<String, String>>();
 		alMap.add(hm);
+//		hm = new HashMap<String, String>();		
 		setHm(hm);
 //		hm = new HashMap<String, String>();
 		
 		System.out.println(hm.get("name"));
 		System.out.println(hm.get("age"));
+		
 		System.out.println(alMap.get(0).get("name"));
 		System.out.println(alMap.get(0).get("age"));
 		
