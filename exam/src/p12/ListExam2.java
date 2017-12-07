@@ -68,8 +68,7 @@ public class ListExam2 {
 			else {
 				System.out.println("index " + i + "->" + al.get(i));							
 			}			
-		}
-		
+		}		
 	}
 	
 	void print() {
