@@ -33,10 +33,8 @@ public class Controller {
 		}
 		else if(command.equals("add")) {						
 			boolean isOk = insertUser(user);
-			if(isOk) {
-				
-				System.out.println(user.getName() + "입력 완료!");
-				
+			if(isOk) {				
+				System.out.println(user.getName() + "입력 완료!");				
 			}else {
 				System.out.println("입력중에 알수 없는 에러가 발생했습니다.");				
 			}			

@@ -23,9 +23,7 @@ public class User {
 
 	public void setNo(int no) {
 		this.no = no;
-	}
-
-	
+	}	
 	
 	public String getName() {
 		return name;

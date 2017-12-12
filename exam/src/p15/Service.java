@@ -8,10 +8,8 @@ public class Service{
 	
 	private DAO dao;
 	
-	public Service() {
-		
-		dao = new DAO();
-		
+	public Service() {		
+		dao = new DAO();		
 	}
 	
 	public boolean insertUser(User user) {		

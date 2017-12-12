@@ -68,7 +68,7 @@ public class Excute {
 			System.out.println(uu);			
 		}
 		
-		User ru = new User(3);
+		User ru = new User(6);
 		c.get("remove", ru);		
 		for(User uu : userList) {			
 			System.out.println(uu);			

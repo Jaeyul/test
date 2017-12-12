@@ -74,7 +74,7 @@ public class Exam {
 		
 		ArrayList<Integer> alt = new ArrayList<Integer>();
 		
-		Iterator<Integer> it = hm.keySet().iterator();
+		Iterator<Integer> it = hm.keySet().iterator();		
 		
 		System.out.println("");
 		while(it.hasNext()) {
@@ -82,6 +82,10 @@ public class Exam {
 			System.out.println(hm.get(key).size());
 			alt.add(key);
 		}
+		
+		System.out.println(alt);
+		
+		System.out.println("");
 		
 		for(int i=0; i<alt.size(); i++) {
 			for(int j=i+1; j<alt.size(); j++) {

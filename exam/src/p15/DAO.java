@@ -54,17 +54,13 @@ public class DAO {
 		}		
 		return userList.remove(u);		
 	}	
-	
-	
-	
-	
-	public boolean updateUser(User user) {
 		
+	public boolean updateUser(User user) {		
 		User u = getUser(user.getNo());
 		if(u == null) {			
-			return false;
-			
-		}else {
+			return false;			
+		}
+		else {
 			u.setName(user.getName());
 			u.setAge(user.getAge());
 			return true;			
@@ -74,15 +70,12 @@ public class DAO {
 	
 	public ArrayList<User> getUserList(String str) {
 		
-		if(str == null) {
-			
+		if(str == null) {			
 			return userList;
 		}
-		else {
-			
+		else {			
 			ArrayList<User> userList = getUser(str);
-			return userList;
-			
+			return userList;			
 		}
 		
 		
