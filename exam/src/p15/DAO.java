@@ -6,6 +6,10 @@ public class DAO {
 	
 	ArrayList<User> userList = new ArrayList<User>();
 	
+	ArrayList<User> userListD = userList;
+	
+	
+	
 	public boolean insertUser(User user) {		
 		return userList.add(user);		
 	}
