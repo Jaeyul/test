@@ -16,6 +16,23 @@ public class DAO {
 		return null;		
 	}	
 	
+	public ArrayList<User> getUserList(String str){	
+		if(str == null) {
+			return userList;
+		}
+		else {
+			ArrayList<User> userList = findUsers(str);
+			return userList;			
+		}
+							
+			
+	}		
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -42,17 +59,7 @@ public class DAO {
 //	}
 	
 			
-	public ArrayList<User> getUserList(String str){	
-		if(str == null) {
-			return userList;
-		}
-		else {
-			ArrayList<User> userList = findUsers(str);
-			return userList;			
-		}
-							
-			
-	}		
+	
 	
 	public boolean insertUser(User user) {		
 		return userList.add(user);		

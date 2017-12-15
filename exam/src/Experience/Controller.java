@@ -51,9 +51,7 @@ public class Controller {
 			}
 			else {				
 				System.out.println("update 실패함 ㅋ");	
-			}
-			
-			
+			}			
 		}
 		return null;		
 		
