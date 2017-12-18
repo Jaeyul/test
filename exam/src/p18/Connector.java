@@ -16,14 +16,15 @@ public class Connector {
 	private String user = "root";
 	private String password = "test";
 	
-	
-	public Connector() throws ClassNotFoundException, SQLException {		
+	 
+	public Connector() throws ClassNotFoundException {		
 		Class.forName("org.mariadb.jdbc.Driver");		
 	}
 	
 	public Connection getConnection() throws SQLException {
 		if(con == null) {
 			con = DriverManager.getConnection(url, user, password);
+			con.setAutoCommit(false);
 		}		
 		return con;
 	}
