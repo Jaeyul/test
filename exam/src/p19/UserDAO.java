@@ -38,7 +38,7 @@ public class UserDAO extends CommonDAO {
 
 	public ArrayList<HashMap<String, Object>> getUserList() throws SQLException{
 		ArrayList<HashMap<String, Object>> userList = new ArrayList<HashMap<String, Object>>();
-		String sql = "select * from user_info";
+		String sql = "select * from user_info;";
 		
 		PreparedStatement ps = con.prepareStatement(sql);
 		ResultSet rs = ps.executeQuery();
@@ -47,8 +47,7 @@ public class UserDAO extends CommonDAO {
 			hm.put("uiid", rs.getString("uiid"));
 			hm.put("uino", rs.getInt("uino"));
 			userList.add(hm);					
-		}
-	
+		}	
 		return userList;		
 	}
 	
@@ -68,9 +67,40 @@ public class UserDAO extends CommonDAO {
 		return result;		
 	}
 	
-	public int updateUser(HashMap<String, Object> hm) {		
-		return 0;
-	}	
+	
+	
+	public String getName(int userNo) throws SQLException {
+				
+		String sql = "select * from user_info;";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ResultSet rs = ps.executeQuery();
+		while(rs.next()) {
+			if(rs.getInt("uino") == userNo) {				
+				return rs.getString("uiname");
+			}			
+		}		
+		return null;		
+	}
+	
+	
+	public int updateUser(int userNo) throws SQLException {		
+		
+		String sql = "update user_info set uiname = ? where uino=?;";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setString(1, getName(userNo));
+		ps.setInt(2, userNo);
+		int result = ps.executeUpdate();
+		return result;
+		
+	}		
+	
+	
+//	
+//	public int updateUser(HashMap<String, Object> hm) throws SQLException {	
+//		
+//		
+//		return 0;
+//	}	
 		
 	
 	public int deleteUser(int userNo) throws SQLException {		

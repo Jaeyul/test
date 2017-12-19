@@ -26,6 +26,7 @@ public class UserList {
 				colNames[i] = rsmd.getColumnLabel(i+1);
 //				System.out.println(colName);								
 			}	
+						
 			
 			ArrayList<HashMap<String, Object>> objList = new ArrayList<HashMap<String, Object>>();
 			

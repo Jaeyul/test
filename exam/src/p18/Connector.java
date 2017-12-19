@@ -17,7 +17,7 @@ public class Connector {
 	private String password = "test";
 	
 	 
-	public Connector() throws ClassNotFoundException {		
+	public Connector() throws ClassNotFoundException  {		
 		Class.forName("org.mariadb.jdbc.Driver");		
 	}
 	
