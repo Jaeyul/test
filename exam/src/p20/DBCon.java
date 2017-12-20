@@ -54,7 +54,19 @@ public class DBCon {
 			}
 			objList.add(hm);
 		}
-		return objList;
+		
+		if(objList.size() == 0) {
+			ArrayList<HashMap<String,Object>> objList2 = new ArrayList<HashMap<String,Object>>();
+			HashMap<String,Object> hm = new HashMap<String,Object>();
+			hm.put("검색", "없음");
+			objList2.add(hm);			
+			return objList2;			
+			
+		}else {	
+			
+			return objList;		
+			
+		}		
     }
 
     public void closeAll() throws SQLException {
@@ -118,4 +130,30 @@ public class DBCon {
     	}
     	return objList;
     }
+    
+    
+    
+    
+    
+    
+//    public ArrayList<HashMap<String,Object>> executeQuery(String sql, String name)throws SQLException {
+//    	    	
+//    	ArrayList<HashMap<String,Object>> objList = null;
+//    	if(openConn()) {
+//    		ps = conn.prepareStatement(sql);
+//    		setParameter(hm);
+//    		rs = ps.executeQuery();
+//    		objList = parseResultSet(rs);
+//    	}
+//    	return objList;
+//    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

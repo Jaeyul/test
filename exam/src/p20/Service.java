@@ -38,7 +38,7 @@ public class Service {
 		return result;		
 	}
 	
-	public ArrayList<HashMap<String,Object>> getClassList (LinkedHashMap<String,Object> hm){
+	public ArrayList<HashMap<String,Object>> getClassList (){
 		String sql = "select * from class_info";	
 		ArrayList<HashMap<String,Object>> classList = null;
 		try {
@@ -54,6 +54,27 @@ public class Service {
 		}		
 		return classList;
 	}
+	
+	
+	
+	public ArrayList<HashMap<String,Object>> getList (LinkedHashMap<String,Object> hm){
+		String sql = "select * from class_info\r\n" + 
+				"where ciname = ?;";
+		ArrayList<HashMap<String,Object>> resultList = null;
+		try {
+			resultList = dbcon.executeQuery(sql, hm);
+		} catch (SQLException e) {			
+			e.printStackTrace();
+		} finally {
+			try {
+				dbcon.closeAll();
+			} catch (SQLException e) {				
+				e.printStackTrace();
+			}			
+		}		
+		return resultList;
+	}
+	
 	
 	public int removeClassInfo(LinkedHashMap<String, Object> hm) {
 		int result = 0;
@@ -81,33 +102,30 @@ public class Service {
 
 	public int insertClassInfo(LinkedHashMap<String, Object> hm) {
 		
+	
+		
 		int result = 0;		
 		String sql = "insert into class_info(ciname, cidescr)\r\n" + 
 				"values(?,?);";
-		try {			
+		try {
 			result = dbcon.executeUpdate(sql, hm);
 			dbcon.commit();
-		} catch (SQLException e) {		
+		} catch (SQLException e) {			
+			e.printStackTrace();
 			try {
 				dbcon.rollback();
 			} catch (SQLException e1) {				
 				e1.printStackTrace();
 			}
-			e.printStackTrace();
-		}finally {			
+		}finally {
 			try {
 				dbcon.closeAll();
 			} catch (SQLException e) {				
 				e.printStackTrace();
-			}
+			}			
 		}		
-		return result;		
+		return result;	
 	}
-	
-	
-	
-	
-	
 	
 	
 		

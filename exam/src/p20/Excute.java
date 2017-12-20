@@ -7,15 +7,17 @@ import java.util.LinkedHashMap;
 public class Excute {
 	
 	public static void setHm(LinkedHashMap<String, Object> hm) {		
-		hm.put("cino", 3);
-		hm.put("ciname", "재열이반");
-		hm.put("cidescr", "의지박약");		
+		
+		hm.put("ciname", "명훈이반");
+		hm.put("cidescr", "담배");		
 	}
 	
 	
 	
 	
 	public static void print(ArrayList<HashMap<String,Object>> classList) {
+		
+//		System.out.println(classList);
 		
 		for(HashMap<String,Object> cl : classList) {			
 			System.out.println(cl);
@@ -36,21 +38,57 @@ public class Excute {
 //			System.out.println("업데이트 잘됬음!");
 //		}
 		
-		hm = new LinkedHashMap<String, Object>();
-		setHm(hm);
-//		
-		s.insertClassInfo(hm);		
-		
+//		hm = new LinkedHashMap<String, Object>();
+//		setHm(hm);
 //		
 //		hm = new LinkedHashMap<String, Object>();
-//		hm.put("className", "class_info");
+//		setHm(hm);	
 //		
-		ArrayList<HashMap<String,Object>> classList = s.getClassList(hm);
+//		s.insertClassInfo(hm);		
+		
+		
+//		hm = new LinkedHashMap<String, Object>();
+//		hm.put("a", 17);
+		
+		
+		
+
+//		s.removeClassInfo(hm);
+		
+
+//		hm = new LinkedHashMap<String, Object>();
+			
+//		System.out.println("");
+//		
+//		hm = new LinkedHashMap<String, Object>();
+//		hm.put("ciname", "정보보안");
+
+
+		
+		
+		
+
+		
+		ArrayList<HashMap<String,Object>> classList = s.getClassList();
 		print(classList);
+//		
+//		System.out.println("");
+//		
+//		hm = new LinkedHashMap<String, Object>();
+//		hm.put("ciname", "정보보안");		
+//		
+//		ArrayList<HashMap<String,Object>> findDataa = s.getList(hm);
+//		print(findDataa);
+		
+		
+		
+		
+		
+		
 		
 //		hm = new LinkedHashMap<String, Object>();
 //		hm.put("cino", 7);
-		s.removeClassInfo(hm);
+//		s.removeClassInfo(hm);
 //		
 //		int removeResult = s.removeClassInfo(hm);		
 //		if(removeResult == 2 ) {			
@@ -58,4 +96,11 @@ public class Excute {
 //		}
 		
 	}
+
+
+
+
+
+
+	
 }

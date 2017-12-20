@@ -41,20 +41,13 @@ public class Array {
 				alLotto.add(nums);				
 			}
 		}		
-	}			
-	
-	
+	}				
 	
 	void print() {
 		System.out.println(alName);
 		System.out.println(alLotto);			
 	}
-	
-	
-	
-	
-	
-		
+			
 	public static void main(String[] args) {
 		Array ar = new Array();
 		ar.inputeValue();
